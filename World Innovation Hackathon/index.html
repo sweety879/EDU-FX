@@ -1,0 +1,198 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <title> 🌳Environment Assessment Demo App</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<style>
+    
+    body
+    {
+    font-family: 'Source Sans Pro', sans-serif;
+    padding-left: 40px ;
+    padding-right: 40px;
+    padding-top:30px;
+    text-align: left;
+    background: linear-gradient(220deg, rgb(93, 196, 110) 13.2%, rgb(167, 229, 243) 65%)}
+
+h1 {
+    text-align: center;
+    margin: 0 auto;
+    font-size: 30px;
+    font-weight: 800;
+}
+
+.sdg {
+    font-size: 14px;
+    color: black;
+}
+
+.EI {
+    margin: 0 auto;
+    font-size: 14px;
+    color: black;
+    text-align: left;
+
+
+}
+
+form {
+  /* Center the form on the page */
+  margin: 0 auto;
+  width: 700px;
+  /* Form outline */
+  padding: 1em;
+  border: 1px solid #20B2AA;
+  border-radius: 1em;
+}
+.container {  
+    padding: 10px;  
+ 
+}  
+div {  
+            padding: 10px 0;  
+         }  
+hr {  
+  border: 1px solid #f1f1f1;  
+  margin-bottom: 25px;  
+}
+
+.registerbtn {  
+  background-color: #4CAF50;  
+  color: white;  
+  padding: 16px 20px;  
+  margin: 8px 0;  
+  border: none;  
+  cursor: pointer;  
+  width: 100%;  
+  opacity: 0.9;  
+
+} 
+.registerbtn:hover {  
+  opacity: 1;  
+}
+input[type=text], textarea {  
+ 
+  padding: 15px;  
+  margin: 5px 0 22px 0;  
+  display: inline-block;  
+  border: none;  
+  background: #f1f1f1;  
+}  
+textarea 
+{
+width:100%
+}
+input[type=text]:focus {  
+  background-color: green;  
+  outline: none;  
+}  
+span{
+  color:red;
+}
+</style>
+<body>
+    <h1>
+     🌳ECO ACTION
+    </h1>
+     <div>
+         <br/>
+    <p class ="sdg">
+   Education for Sustainable Development (ESD) empowers people to change the way they think and work towards a sustainable future. 
+<a href=https://en.unesco.org/themes/education-sustainable-development target_blank>href=https://en.unesco.org/themes/education-sustainable-development</a>
+UNESCO aims to improve access to quality education on sustainable development at all levels and in all social contexts, to transform society by reorienting education and help people develop knowledge, skills, values and behaviors needed for sustainable development. It is about including sustainable development issues, such as climate change and biodiversity into teaching and learning. Individuals are encouraged to be responsible actors who resolve challenges, respect cultural diversity and contribute to creating a more sustainable world 
+In order to Register the complaints that you face in the envirement please fill the below form:
+      </p>
+    </div>
+<form id="ei">
+<div class="container">
+        <label for="inputtext" class="form-label">Environment Issues</label><span class="required">*</span>
+        <input 
+        type = "text" 
+        placeholder = "Search problem" 
+        autofocus = on
+         id= "search-text-input" size="70"
+         required="required"
+          />
+        <input id="searchbut"
+         type="button" value="Search"/>
+      </div>
+      <br/>
+</div>
+</form>
+<div></div>
+<form id="form2">  
+  <div class="container">  
+  <center>  <h1>Form</h1> </center>  
+  <hr>  
+  <label> Full Name:</label>   
+<input type="text"  name="firstname" placeholder= "Fullname" size="70" required />   
+  
+<div>
+<label>   
+Phone:  
+</label>  
+<input type="text" name="phone" placeholder="phone no." size="70" required> 
+</div>  
+Current Address:  
+<textarea cols="80" rows="5" placeholder="Current Address" value="address" required>  
+</textarea>  
+Please provide details of your Environment issue (Add any additional data):  
+<textarea cols="80" rows="5" placeholder="Statistics of the problem" value="Statistics" required>  
+</textarea> 
+ <label for="email">Email:</label>  
+ <input type="text" placeholder="Enter Email" id="email" name="email" required size="70">  
+    <button type="submit" class="registerbtn">Submit</button>    
+</form> 
+<script>
+  $(document).ready(function(){
+$("#form2 input").prop("disabled", true);
+});
+
+  $("#searchbut").click(function(){
+
+if($("#search-text-input").val().toLowerCase()=="air pollution" )
+{
+  if (window.confirm('Please contact your local environmental protection officer or reach out to the NGO providing free air quality monitoring for further assessments. Click "OK" to access already implemented air pollution solutions. "CANCEL" will redirect to ECO ACTION app')) 
+{
+window.location.href='https://www.downtoearth.org.in/news/air/14-ways-citizens-and-govt-can-help-reduce-air-pollution-in-delhi-62138#:~:text=By%20Arvinder%20S%20Brara%201%20Car%20pooling%3A%20Reduce,by%20public%20transport%20affordably%20...%20More%20items...%20';
+};
+return false;
+}
+if($("#search-text-input").val().toLowerCase()=="water pollution")
+{
+  if (window.confirm('Please contact your local environmental protection officer or reach out to the NGO providing free water quality monitoring for further assessments. Click "OK" to access already implemented water pollution solutions. "CANCEL" will redirect to ECO ACTION app')) 
+{
+window.location.href='https://www.livemint.com/news/india/kaleshwaram-project-secures-hyderabad-s-water-supply-for-the-future-1564549086630.html';
+};
+
+return false;
+}
+if($("#search-text-input").val().toLowerCase()=="noise pollution")
+{
+  if (window.confirm('Please contact your local environmental protection officer or reach out to the NGO providing Noise free city for further assessments. Click "OK" to access already implemented noise pollution solutions. "CANCEL" will redirect to ECO ACTION app')) 
+{
+window.location.href='https://www.thebetterindia.com/41380/no-honking-man-of-india-ravi-kalra-delhi/';
+};
+return false;
+}
+if($("#search-text-input").val().toLowerCase()!="noise pollution" || "water pollution" || "air pollution")
+{
+  if (window.confirm('Please contact the near NGOs.Click "OK" to access NGO contact details. Click "CANCEL" to be redirected to ECO ACTION app and Please fill the required details and submit your environment issue(add any additional data)')) 
+{
+window.location.href='https://ngosindia.com/contact-us/#:~:text=Contact.%20Delhi%20NGOs%20India%20Chanakya%20L-23%2C%20Ground%20Floor%2C,Email%3A%20Support%3A%20For%20Verification%20of%20NGOs%3A%20Mumba%20';
+};
+$("#form2 input").prop("disabled", false);
+}
+
+
+});
+$('.registerbtn').click(function(){
+alert("A contact person will respond to your problem statement as soon as possible. Please use this tracking #  T34355 and check your registered email ID for more details.")
+})
+
+</script> 
+</body>
+</html>
